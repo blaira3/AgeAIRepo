@@ -1,0 +1,40 @@
+---
+title: "My First Quarto Site"
+author: "Sarah"
+format: html
+---
+
+## Welcome
+
+This page was written in **Quarto** and published straight from GitHub.
+* It renders to a real webpage.
+* The source is plain text, so Git tracks every change cleanly.
+
+
+```{python}
+print("Hello from a rendered code chunk!")
+```
+
+## Load
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+sales = pd.read_csv("data/campus_cafe_sales.csv")
+sales.head()
+```
+
+```{python}
+#| echo: false
+
+print("This line was produced by Python when the document was rendered.")
+```
+
+**Dataset:** `campus_cafe_sales.csv` 
+```{python}
+#| include: false
+
+# Runs silently. Nothing appears here, but "sales" esists...
+```
+
